@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -12,18 +11,10 @@ import java.awt.event.ActionListener;
  **/
 class test_GUI
 {
-    private static String ID;
-    private JFrame jFrame = new JFrame("登录");
-    private Container c = jFrame.getContentPane();
-    private JLabel a1 = new JLabel("用户名");
-    private JTextField username = new JTextField();
-    private JLabel a2 = new JLabel("密   码");
-    private JPasswordField password = new JPasswordField();
-    private JButton okbtn = new JButton("确定");
-    private JButton cancelbtn = new JButton("取消");
 
-    JTextField userText = new JTextField();
-    JPasswordField passwordText = new JPasswordField();
+    private JTextField userText = new JTextField();
+    private JPasswordField passwordText = new JPasswordField();
+
     public static void main(String[] args)
     {
         test_GUI A=new test_GUI();
@@ -44,7 +35,7 @@ class test_GUI
 
     }
 
-    public void place_login(JPanel panel)
+    private void place_login(JPanel panel)
     {
 
         panel.setLayout(null);
@@ -98,16 +89,7 @@ class test_GUI
     {
         public void actionPerformed(ActionEvent e)
         {
-            test_sql signin=new test_sql();
-            String ID=userText.getText();
-            String password = new String(passwordText.getPassword());
-            signin.sqlLines="select 用户ID,密码 from 系统用户表 where 用户ID='"+ID+"' and 密码='"+password+"'";//SQL语句
-            signin.SQL();//执行SQL语句
 
-            if(signin.result[1]==null)
-                JOptionPane.showMessageDialog(null, "密码错误,请重新输入", "密码错误", JOptionPane.ERROR_MESSAGE);
-            else
-                JOptionPane.showMessageDialog(null, "登陆成功", "登陆成功", JOptionPane.INFORMATION_MESSAGE);
         }
     }
 }

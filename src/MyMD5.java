@@ -19,7 +19,8 @@ class MyMD5 {
 
     private static char[] hex = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args)
+    {
         String input = "123456";
         System.out.println("MD5加密" + "\n"
                 + "明文：" + input + "\n"

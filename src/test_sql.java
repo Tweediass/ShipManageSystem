@@ -44,9 +44,9 @@ class test_sql
                 {
                     result[i] = rs.getString(i);
                 }
-
             }
         }
+
 
         // Handle any errors that may have occurred.
         catch (Exception e)
