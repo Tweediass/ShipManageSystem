@@ -10,7 +10,6 @@ import java.awt.event.ActionListener;
  **/
 public class Login extends GUI
 {
-    JPanel loginPanel = new JPanel();
     private JTextField userText = new JTextField();
     private JPasswordField passwordText = new JPasswordField();
 
@@ -73,7 +72,10 @@ public class Login extends GUI
         @Override
         public void actionPerformed(ActionEvent e)
         {
-            Frame1.remove(loginPanel);
+            Frame1.dispose();
+            loginPanel.setVisible(false);
+            Frame1.repaint();
+            System.out.println("1");
         }
 
     }

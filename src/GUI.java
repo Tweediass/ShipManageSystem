@@ -24,6 +24,7 @@ public class GUI
         L.runLogin(loginPanel);
         Frame1.add(loginPanel);// 添加登陆面板
 
+        Frame1.repaint();
         // 设置界面可见,这句话要放在最后
         Frame1.setVisible(true);
         JPanel panelSignin = new JPanel();
